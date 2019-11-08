@@ -12,13 +12,17 @@ pin.ChangeDutyCycle(0)
 cycle = 0
 
 # cycle between dutycycles
+
+i = 1
+
 try:
-    pin.ChangeDutyCycle(cycle)
-    if cycle < 100:
-        cycle += 20
-    else:
-        cycle = 0
-    time.sleep(1)
+    while i == 1:
+        pin.ChangeDutyCycle(cycle)
+        if cycle < 100:
+            cycle += 20
+        else:
+            cycle = 0
+        time.sleep(1)
 
 # exit
 except KeyboardInterrupt:
