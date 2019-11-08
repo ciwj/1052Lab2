@@ -9,13 +9,15 @@ pin.start(50)
 
 freq = 200
 
+i = 1
 try:
-    if freq < 1000:
-        freq += 200
-    else:
-        freq = 200
-    pin.ChangeDutyCycle(freq)
-    time.sleep(1)
+    while i == 1:
+        if freq < 1000:
+            freq += 200
+        else:
+            freq = 200
+        pin.ChangeFrequency(freq)
+        time.sleep(1)
 
 except KeyboardInterrupt:
     pass
